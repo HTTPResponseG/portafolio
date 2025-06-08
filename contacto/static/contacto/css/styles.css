@@ -1,0 +1,139 @@
+:root {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+  --primary-color: #3b82f6;
+  --accent-color: #38bdf8;
+  --card-bg: #1e293b;
+  --input-bg: #334155;
+  --border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  padding: 20px;
+}
+
+header {
+  background-color: var(--card-bg);
+  padding: 15px 0;
+  border-radius: var(--border-radius);
+  margin-bottom: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h1, h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.tech-item {
+  text-align: center;
+  background-color: #0f172a;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  transition: transform 0.3s;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+}
+
+.tech-item img {
+  max-width: 60px;
+  margin-bottom: 10px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input{
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.input-message{
+    padding-bottom: 5rem;
+}
+
+input::placeholder{
+  color: #94a3b8;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #94a3b8;
+}
