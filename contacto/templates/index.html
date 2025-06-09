@@ -23,12 +23,12 @@
     <section id="about">
       <h1>Hola, soy Gustavo Muñoz</h1>
       <p>
-        Estudiante de Ingenieria en Informática, tengo 25 años y un fuerte interés en el desarrollo Backend y el manejo de datos. Me gusta construir APIs REST funcionales, trabajar con bases de datos y aportar desde la lógica que conecta sistemas. Aunque el Frontend no es mi área de mayor afinidad, me especializo en la capa lógica y estructural de las aplicaciones, con buenas habilidades comunicativas para colaborar eficazmente en equipos multidisciplinarios.
+        Estudiante de Ingeniería en Informática, tengo 25 años y un fuerte interés en el desarrollo Backend y el manejo de datos. Me gusta construir APIs REST funcionales, trabajar con bases de datos y aportar desde la lógica que conecta sistemas. Aunque el Frontend no es mi área de mayor afinidad, me especializo en la capa lógica y estructural de las aplicaciones, con buenas habilidades comunicativas para colaborar eficazmente en equipos multidisciplinarios.
       </p>
     </section>
 
     <section id="tech">
-      <h2>Tecnologías </h2>
+      <h2>Tecnologías</h2>
       <div class="tech-grid">
         <div class="tech-item">
           <img src="../static/contacto/img/logoDjango.webp" alt="Django">
@@ -78,12 +78,12 @@
     </section>
 
     <section id="contact">
-      <h2>Contacto</h2>
+      <h2>Información de Contacto</h2>
       <form id="form-contacto" method="POST">
         {% csrf_token %}
-        <input id="nombre" type="text" name="name" placeholder="Nombre u (Organización y/o Empresa)" required>
+        <input id="nombre" type="text" name="name" placeholder="Nombre (Organización y/o Empresa)" required>
         <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
-        <input id="mensaje" class="input-message"type="text" name="Mensaje"placeholder="Tu Mensaje..." required>
+        <input id="mensaje" class="input-message"type="text" name="Mensaje"placeholder="¡Deja tu mensaje Aquí!" required>
         <button type="submit">Enviar</button>
       </form>
       <p id="respuesta"></p>

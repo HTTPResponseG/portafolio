@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'mi_portafolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 if DEBUG:
-    #Base de datos local con SQLite
+    # Base de datos local con SQLite
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -83,13 +83,14 @@ if DEBUG:
         }
     }
 else:
-    #Base de datos PostgreSQL en producción (Render)
+    # Base de datos PostgreSQL en producción (Render)
     DATABASES = {
         'default': dj_database_url.config(
             conn_max_age=600,
             ssl_require=True
         )
     }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
