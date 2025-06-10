@@ -14,14 +14,21 @@ class MensajeView(View):
     def post(self, request):
         try:
             data = json.loads(request.body)
+
+            email = data.get('email', '').strip()
+            if ' ' in email:
+                return JsonResponse({'error': 'El correo electrónico no debe contener espacios.'}, status=400)
+
             mensaje = Mensaje(
-                nombre=data['nombre'],
-                email=data['email'],
-                mensaje=data['mensaje']
+                nombre=data['nombre'].strip(),
+                email=email,
+                mensaje=data['mensaje'].strip()
             )
             print(data)
             mensaje.save()
-            return JsonResponse({'mensaje': 'Mensaje recibido con exito'}, status=200)
+
+            return JsonResponse({'mensaje': 'Mensaje recibido con éxito'}, status=200)
         except Exception as e:
-            return JsonResponse({'error':str(e)}, status=400)
+            return JsonResponse({'error': str(e)}, status=400)
+
 
